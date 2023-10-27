@@ -1,0 +1,298 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    background: linear-gradient(45deg,gray,black,lightgray );
+    background-size:400% 400% ;
+    animation: fanimado 10s ease infinite;
+}
+
+@keyframes fanimado {
+    0%{
+background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+   }
+
+.contenedor{
+    width: 1200px;
+    height: 400px;
+    background: #ccc;
+    margin: 115px auto;
+    display: flex;
+}
+
+.col{
+    height: 100%;
+    flex: 1;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    transition: 0.6s;
+}
+
+.col:nth-child(1){
+    background-color:darkblue ;
+}
+
+.col:nth-child(2){
+    background-color:#f18684 ;
+}
+
+.col:nth-child(3){
+    background-color:pink ;
+}
+
+.col:nth-child(4){
+    background-color:lightblue ;
+}
+
+
+
+h2{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.descripcion{
+    max-width: 230px;
+    font-size: 12px;
+    margin: 28px 0;
+    display: none;
+
+}
+
+.descripcion button{
+border: 1px solid#fff;
+background: transparent;
+outline: none;
+padding: 8px 18px;
+color:#fff;
+border-radius: 30px ;
+margin-top: 20px;
+cursor: pointer;
+font-size: 12;
+}
+
+.col img{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+.col:hover{
+    flex-grow: 2.5;
+}
+
+.col:hover .descripcion{
+display: block;
+
+}
+
+.col:hover h2{
+    text-align: left;
+}
+.btn{
+ border: 1px solid#fff;
+background: transparent;
+outline: none;
+padding: 8px 18px;
+color:#fff;
+border-radius: 30px ;
+margin-top: 20px;
+cursor: pointer;
+font-size: 12;
+}
+
+
+.paoimg{
+    width: 40%;
+    height: 250px;
+    
+}
+
+.aleimg{
+  height: 200px;
+  
+}
+.mimg{
+    height: 250px;
+    width: 300px;
+}
+
+.cre{
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    
+}
+
+:root{
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+header{
+    background: linear-gradient(45deg,gray,black,lightgray);
+    background-size: 400% 400%;
+    animation: fanimado 10s ease infinite;
+    animation-delay: 0s;
+    color: var(--text-color);
+    animation-fill-mode: forwards;
+  }
+body{
+    min-height: 100vh;
+    background: linear-gradient(45deg,gray,black,lightgray);
+    background-size:400% 400%;
+    animation: fanimado 10s ease infinite;    
+    color: var(--text-color);
+}
+@keyframes fanimado {
+    0%{
+background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+   }
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50 ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding:  5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+.calculator{
+    display: flex;
+    align-items: center;
+}
+.calculator i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+/*Reglas CSS para hacer responsivo el menú*/
+@media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+@media (max-width: 969px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+    .navbar a.active{
+        color: var(--text-color);   
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
